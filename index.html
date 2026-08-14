@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AKSI KOMBAT</title>
+    <style>
+        /* Reset margin dan padding bawaan browser */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #f3f4f6; /* Warna latar yang lembut */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+        }
+
+        /* Desain untuk layar loading */
+        .loading-screen {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1; /* Berada di bawah iframe setelah dimuat */
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #e5e7eb;
+            border-top: 4px solid #3b82f6; /* Warna biru modern */
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 16px;
+        }
+
+        .loading-text {
+            color: #6b7280;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Desain untuk iframe */
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            z-index: 2; /* Menutupi layar loading saat siap */
+            background: transparent;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Layar Loading Interaktif -->
+    <div class="loading-screen">
+        <div class="spinner"></div>
+        <div class="loading-text">Memuat AKSI KOMBAT...</div>
+    </div>
+
+    <!-- 
+      Penambahan atribut 'allow' untuk memberikan izin ke Google Apps Script:
+      - geolocation: untuk akses GPS
+      - camera: untuk akses Kamera
+      - microphone: opsional (biasanya dibutuhkan jika merekam video)
+    -->
+    <iframe 
+        allow="geolocation *; camera *; microphone *" 
+        src="https://script.google.com/a/macros/guru.smk.belajar.id/s/AKfycbzIzyVp6-J-z16fSTZRs72re0kdXoeBRcOZ6Fa5iO9QC8Wrv7ywhRn94kmcAG70sMMZ/exec"
+        title="Aksi KOMBAT"
+    >
+        Browser Anda tidak mendukung iframe.
+    </iframe>
+
+</body>
+</html>
