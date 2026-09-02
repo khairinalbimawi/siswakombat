@@ -3,23 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Membuka AKSI KOMBAT...</title>
+    <title>AKSI KOMBAT</title>
     <style>
-        body { margin: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; background-color: #f3f4f6; font-family: sans-serif; }
-        .spinner { width: 40px; height: 40px; border: 4px solid #e5e7eb; border-top: 4px solid #3b82f6; border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 16px; }
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        body, html { 
+            margin: 0; 
+            padding: 0; 
+            width: 100%; 
+            height: 100%; 
+            overflow: hidden; 
+            background-color: #f3f4f6; 
+        }
+        iframe { 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            border: none; 
+        }
     </style>
-    <!-- SINTAKS REDIRECT OTOMATIS -->
-    <meta http-equiv="refresh" content="1;url=https://script.google.com/a/macros/guru.smk.belajar.id/s/AKfycbyB6D8x9zsd79cUXWBR_wsSzuLOdUB__U1ntpB7fPxmn9WLh_OV_cru6NkTgMa8tpL_/exec">
 </head>
 <body>
-    <div class="spinner"></div>
-    <div style="color: #6b7280; font-weight: 500;">Membuka Sistem, mohon tunggu...</div>
-    <script>
-        // Fallback jika meta refresh gagal
-        setTimeout(function() {
-            window.location.href = "https://script.google.com/a/macros/guru.smk.belajar.id/s/AKfycbyB6D8x9zsd79cUXWBR_wsSzuLOdUB__U1ntpB7fPxmn9WLh_OV_cru6NkTgMa8tpL_/exec";
-        }, 1000);
-    </script>
+    <iframe 
+        allow="camera *; microphone *; geolocation *" 
+        src="https://script.google.com/a/macros/guru.smk.belajar.id/s/AKfycbyB6D8x9zsd79cUXWBR_wsSzuLOdUB__U1ntpB7fPxmn9WLh_OV_cru6NkTgMa8tpL_/exec"
+        title="Aksi KOMBAT"
+    >
+        Browser Anda tidak mendukung iframe.
+    </iframe>
 </body>
 </html>
